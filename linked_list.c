@@ -4,7 +4,8 @@
 
 /* macro to enable printk to print the argument along with additional info
    like the function name, the line number */
-#define print(fmt, ...) printk("LIST: %s: %d: "fmt"\n", __func__, __LINE__, ##__VA_ARGS__)
+#define print(fmt, ...) \
+	printk("LIST: %s: %d: "fmt"\n", __func__, __LINE__, ##__VA_ARGS__)
 
 struct node {
 	int data;
